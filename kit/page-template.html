@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F4F0E8">
+  <title>{{BUSINESS_NAME}} — {{OFFER}} | {{CITY_STATE}}</title>
+  <meta name="description" content="{{BUSINESS_NAME}} — {{TRADE}} serving {{TOWNS}}. {{OFFER}}. Call {{PHONE}}.">
+  <style>
+    :root {
+      --cream: #F4F0E8;
+      --cream-deep: #EBE6DC;
+      --ink: #1C1B18;
+      --ink-soft: #4A4843;
+      --line: rgba(28, 27, 24, 0.12);
+      --fill: #1C1B18;
+      --on-fill: #F4F0E8;
+      --radius: 12px;
+      --max: 68rem;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", Times, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Helvetica, Arial, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .skip {
+      position: absolute; left: 0.75rem; top: -3rem;
+      background: var(--ink); color: var(--on-fill);
+      padding: 0.5rem 0.85rem; border-radius: 8px; z-index: 100; text-decoration: none;
+    }
+    .skip:focus { top: 0.75rem; }
+    .wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+    header { padding: 1.35rem 0 1.2rem; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+    .brand { font-weight: 590; letter-spacing: -0.02em; font-size: 1.02rem; text-decoration: none; }
+    .brand span { font-weight: 400; color: var(--ink-soft); margin-left: 0.45rem; font-size: 0.92rem; }
+    .phone { font-weight: 560; text-decoration: none; white-space: nowrap; }
+    .phone:hover, .phone:focus-visible { text-decoration: underline; text-underline-offset: 0.18em; }
+    .hero { padding: 5.5rem 0 4.25rem; }
+    .eyebrow {
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink-soft); margin: 0 0 1.35rem; font-weight: 500;
+    }
+    h1 {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(2.15rem, 5.4vw, 3.85rem);
+      line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 1.35rem; max-width: 16ch;
+    }
+    .lede {
+      font-size: clamp(1.05rem, 2vw, 1.22rem); color: var(--ink-soft);
+      max-width: 38rem; margin: 0 0 2.1rem;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1.35rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 3rem; padding: 0.7rem 1.35rem; border-radius: 980px;
+      border: 1px solid transparent; font: inherit; font-weight: 560;
+      letter-spacing: -0.01em; text-decoration: none; cursor: pointer;
+    }
+    .btn-fill { background: var(--fill); color: var(--on-fill); }
+    .btn-fill:hover { background: #000; }
+    .btn-ghost { background: transparent; border-color: var(--line); color: var(--ink); }
+    .btn-ghost:hover { background: var(--cream-deep); }
+    .btn:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, button:focus-visible {
+      outline: 2px solid var(--ink); outline-offset: 3px;
+    }
+    section { padding: 4.25rem 0; }
+    .rule { border-top: 1px solid var(--line); }
+    h2 {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(1.7rem, 3.2vw, 2.35rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin: 0 0 2.4rem;
+    }
+    .bullets { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.6rem; }
+    @media (min-width: 720px) { .bullets { grid-template-columns: repeat(3, 1fr); gap: 2.4rem; } }
+    .bullets li { padding-top: 1.15rem; border-top: 1px solid var(--line); }
+    .bullets h3 { font-size: 1.08rem; font-weight: 590; letter-spacing: -0.02em; margin: 0 0 0.45rem; }
+    .bullets p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+    .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 1.5rem; }
+    @media (min-width: 720px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+    .steps li { counter-increment: step; }
+    .steps li::before {
+      content: counter(step); display: block; font-family: var(--serif);
+      font-size: 1.55rem; color: var(--ink-soft); margin-bottom: 0.7rem;
+    }
+    .steps h3 { font-size: 1.08rem; font-weight: 590; margin: 0 0 0.4rem; }
+    .steps p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+    .contact-grid { display: grid; gap: 2.5rem; }
+    @media (min-width: 820px) {
+      .contact-grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; align-items: start; }
+    }
+    .contact-copy p { color: var(--ink-soft); max-width: 28rem; }
+    .call-big {
+      display: inline-block; font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2rem); letter-spacing: -0.03em;
+      text-decoration: none; margin: 0.4rem 0 1.2rem;
+    }
+    .call-big:hover { text-decoration: underline; text-underline-offset: 0.12em; }
+    form { display: grid; gap: 0.95rem; }
+    label { display: grid; gap: 0.35rem; font-size: 0.82rem; font-weight: 560; }
+    .pair { display: grid; gap: 0.95rem; }
+    @media (min-width: 560px) { .pair { grid-template-columns: 1fr 1fr; } }
+    input, textarea {
+      width: 100%; font: inherit; font-size: 1rem; color: var(--ink);
+      background: #fff; border: 1px solid var(--line); border-radius: 10px;
+      padding: 0.7rem 0.85rem; appearance: none;
+    }
+    textarea { min-height: 7.2rem; resize: vertical; }
+    .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1.1rem; }
+    .form-hint { font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
+    .status { margin: 0.35rem 0 0; font-size: 0.92rem; min-height: 1.3em; }
+    .status[data-kind="ok"] { color: #1F5C3A; }
+    .status[data-kind="err"] { color: #8A2B1A; }
+    footer {
+      padding: 2.4rem 0 3rem; border-top: 1px solid var(--line);
+      color: var(--ink-soft); font-size: 0.92rem;
+    }
+    footer p { margin: 0.2rem 0; }
+    footer a { text-decoration: none; }
+    footer a:hover { text-decoration: underline; text-underline-offset: 0.16em; }
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 1.6rem, var(--max)); }
+      .hero { padding: 3.4rem 0 3rem; }
+      .brand span { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">{{BUSINESS_NAME}} <span>{{TRADE}}</span></a>
+      <a class="phone" href="tel:+1{{PHONE_DIGITS}}">{{PHONE}}</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow">{{CITY_STATE}} · Serving {{TOWNS}}</p>
+        <h1>{{HEADLINE}}</h1>
+        <p class="lede">{{LEDE}}</p>
+        <div class="cta-row">
+          <a class="btn btn-fill" href="tel:+1{{PHONE_DIGITS}}">Call {{PHONE}}</a>
+          <a class="btn btn-ghost" href="#start">{{OFFER}}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="rule" aria-labelledby="outcomes-heading">
+      <div class="wrap">
+        <h2 id="outcomes-heading">What you get</h2>
+        <ul class="bullets">
+          <li>
+            <h3>{{BULLET_1_TITLE}}</h3>
+            <p>{{BULLET_1_BODY}}</p>
+          </li>
+          <li>
+            <h3>{{BULLET_2_TITLE}}</h3>
+            <p>{{BULLET_2_BODY}}</p>
+          </li>
+          <li>
+            <h3>{{BULLET_3_TITLE}}</h3>
+            <p>{{BULLET_3_BODY}}</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="rule" aria-labelledby="how-heading">
+      <div class="wrap">
+        <h2 id="how-heading">How it works</h2>
+        <ol class="steps">
+          <li>
+            <h3>{{STEP_1_TITLE}}</h3>
+            <p>{{STEP_1_BODY}}</p>
+          </li>
+          <li>
+            <h3>{{STEP_2_TITLE}}</h3>
+            <p>{{STEP_2_BODY}}</p>
+          </li>
+          <li>
+            <h3>{{STEP_3_TITLE}}</h3>
+            <p>{{STEP_3_BODY}}</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="rule" id="start" aria-labelledby="start-heading">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <h2 id="start-heading">{{CTA_HEADING}}</h2>
+          <a class="call-big" href="tel:+1{{PHONE_DIGITS}}">{{PHONE}}</a>
+          <p>Prefer email? Send the form — it opens your mail app with the details filled in. {{BUSINESS_NAME}}, {{CITY_STATE}}.</p>
+        </div>
+
+        <form id="lead-form" action="mailto:{{EMAIL}}" method="post" enctype="text/plain" novalidate>
+          <div class="pair">
+            <label>Name
+              <input type="text" name="name" id="name" autocomplete="name" required placeholder="Your name">
+            </label>
+            <label>Town
+              <input type="text" name="town" id="town" autocomplete="address-level2" required placeholder="Your town">
+            </label>
+          </div>
+          <div class="pair">
+            <label>Phone
+              <input type="tel" name="phone" id="phone" autocomplete="tel" required placeholder="Your phone">
+            </label>
+            <label>Best time to call
+              <input type="text" name="best_time" id="best_time" placeholder="Morning / after 5…">
+            </label>
+          </div>
+          <label>What do you need?
+            <textarea name="job" id="job" required placeholder="Short description of the job…"></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn btn-fill" type="submit">Send my request</button>
+            <p class="form-hint">We only use this to reach you about this job. No street address, DOB, or SSN collected.</p>
+          </div>
+          <p class="status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap nav">
+      <div>
+        <p>{{BUSINESS_NAME}}</p>
+        <p>{{TRADE}} · {{CITY_STATE}}</p>
+      </div>
+      <div>
+        <p><a href="tel:+1{{PHONE_DIGITS}}">{{PHONE}}</a></p>
+        <p><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById("lead-form");
+      var status = document.getElementById("form-status");
+      if (!form) return;
+      function val(id) { return (document.getElementById(id).value || "").trim(); }
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        status.textContent = "";
+        status.removeAttribute("data-kind");
+        var name = val("name"), town = val("town"), phone = val("phone"), job = val("job");
+        var best = val("best_time");
+        if (!name || !town || !phone || !job) {
+          status.dataset.kind = "err";
+          status.textContent = "Please fill in name, town, phone, and what you need.";
+          return;
+        }
+        var subject = "{{BUSINESS_NAME}} lead — " + town;
+        var body =
+          "Name: " + name + "\n" +
+          "Town: " + town + "\n" +
+          "Phone: " + phone + "\n" +
+          "Best time: " + (best || "(not given)") + "\n\n" +
+          "Job:\n" + job;
+        var href =
+          "mailto:{{EMAIL}}" +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+        status.dataset.kind = "ok";
+        status.textContent = "Opening your email app…";
+        window.location.href = href;
+      });
+    })();
+  </script>
+</body>
+</html>

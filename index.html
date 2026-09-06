@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F4F0E8">
-  <title>72 Hour Page — A page that books the job. Live in 72 hours.</title>
-  <meta name="description" content="High-converting landing page and lead capture in 72 hours for North Jersey landscapers, HVAC, roofers, contractors, and custom builders. Wayne, NJ. Call 917-536-1245.">
+  <title>Conversion Page Kit — Self-serve landing page for local trades | $67</title>
+  <meta name="description" content="Buy the Local Business Conversion Page Kit: HTML/CSS starter, AI copy prompts, and launch checklist. One-time $67 digital download. No sales call. Wayne, NJ.">
   <meta name="author" content="Lukasz Zienko">
   <style>
     :root {
@@ -16,367 +16,180 @@
       --line: rgba(28, 27, 24, 0.12);
       --fill: #1C1B18;
       --on-fill: #F4F0E8;
-      --focus: #1C1B18;
-      --radius: 12px;
+      --accent: #1F5C3A;
       --max: 68rem;
       --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Times New Roman", Times, serif;
       --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Helvetica, Arial, sans-serif;
     }
-
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
     }
-
     body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 1.0625rem;
-      line-height: 1.55;
+      margin: 0; background: var(--cream); color: var(--ink);
+      font-family: var(--sans); font-size: 1.0625rem; line-height: 1.55;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
-
     a { color: inherit; }
-    img { max-width: 100%; }
-
     .skip {
-      position: absolute;
-      left: 0.75rem;
-      top: -3rem;
-      background: var(--ink);
-      color: var(--on-fill);
-      padding: 0.5rem 0.85rem;
-      border-radius: 8px;
-      z-index: 100;
-      text-decoration: none;
+      position: absolute; left: 0.75rem; top: -3rem;
+      background: var(--ink); color: var(--on-fill);
+      padding: 0.5rem 0.85rem; border-radius: 8px; z-index: 100; text-decoration: none;
     }
     .skip:focus { top: 0.75rem; }
-
-    .wrap {
-      width: min(100% - 2.5rem, var(--max));
-      margin-inline: auto;
-    }
-
-    /* Header */
-    header {
-      padding: 1.35rem 0 1.2rem;
-      border-bottom: 1px solid var(--line);
-    }
-    .nav {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-    .brand {
-      font-weight: 590;
-      letter-spacing: -0.02em;
-      font-size: 1.02rem;
-      text-decoration: none;
-    }
-    .brand span {
-      font-weight: 400;
-      color: var(--ink-soft);
-      margin-left: 0.45rem;
-      font-size: 0.92rem;
-    }
-    .phone {
-      font-weight: 560;
-      letter-spacing: -0.01em;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    .phone:hover, .phone:focus-visible { text-decoration: underline; text-underline-offset: 0.18em; }
-
-    /* Hero */
-    .hero {
-      padding: 5.5rem 0 4.25rem;
-    }
+    .wrap { width: min(100% - 2.5rem, var(--max)); margin-inline: auto; }
+    header { padding: 1.35rem 0 1.2rem; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+    .brand { font-weight: 590; letter-spacing: -0.02em; font-size: 1.02rem; text-decoration: none; }
+    .brand span { font-weight: 400; color: var(--ink-soft); margin-left: 0.45rem; font-size: 0.92rem; }
+    .nav-cta { font-weight: 560; text-decoration: none; white-space: nowrap; }
+    .nav-cta:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+    .hero { padding: 5rem 0 3.75rem; }
     .eyebrow {
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-      margin: 0 0 1.35rem;
-      font-weight: 500;
+      font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink-soft); margin: 0 0 1.35rem; font-weight: 500;
     }
     h1 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: clamp(2.15rem, 5.4vw, 3.85rem);
-      line-height: 1.08;
-      letter-spacing: -0.028em;
-      margin: 0 0 1.35rem;
-      max-width: 14ch;
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(2.15rem, 5.4vw, 3.6rem);
+      line-height: 1.08; letter-spacing: -0.028em; margin: 0 0 1.35rem; max-width: 16ch;
     }
     .lede {
-      font-size: clamp(1.05rem, 2vw, 1.22rem);
-      color: var(--ink-soft);
-      max-width: 38rem;
-      margin: 0 0 2.1rem;
+      font-size: clamp(1.05rem, 2vw, 1.22rem); color: var(--ink-soft);
+      max-width: 40rem; margin: 0 0 2.1rem;
     }
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.85rem 1.35rem;
-    }
-
+    .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1.35rem; }
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      min-height: 3rem;
-      padding: 0.7rem 1.35rem;
-      border-radius: 980px;
-      border: 1px solid transparent;
-      font: inherit;
-      font-weight: 560;
-      letter-spacing: -0.01em;
-      text-decoration: none;
-      cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 3rem; padding: 0.7rem 1.35rem; border-radius: 980px;
+      border: 1px solid transparent; font: inherit; font-weight: 560;
+      letter-spacing: -0.01em; text-decoration: none; cursor: pointer;
     }
-    .btn-fill {
-      background: var(--fill);
-      color: var(--on-fill);
-    }
+    .btn-fill { background: var(--fill); color: var(--on-fill); }
     .btn-fill:hover { background: #000; }
-    .btn-ghost {
-      background: transparent;
-      border-color: var(--line);
-      color: var(--ink);
-    }
+    .btn-ghost { background: transparent; border-color: var(--line); color: var(--ink); }
     .btn-ghost:hover { background: var(--cream-deep); }
-    .btn:focus-visible,
-    a:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible,
-    button:focus-visible {
-      outline: 2px solid var(--focus);
-      outline-offset: 3px;
+    .btn:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, button:focus-visible {
+      outline: 2px solid var(--ink); outline-offset: 3px;
     }
-
-    /* Sections */
-    section { padding: 4.25rem 0; }
+    .price-pill {
+      display: inline-block; font-size: 0.92rem; color: var(--ink-soft); margin-left: 0.15rem;
+    }
+    section { padding: 4rem 0; }
     .rule { border-top: 1px solid var(--line); }
     h2 {
-      font-family: var(--serif);
-      font-weight: 400;
+      font-family: var(--serif); font-weight: 400;
       font-size: clamp(1.7rem, 3.2vw, 2.35rem);
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      margin: 0 0 2.4rem;
+      letter-spacing: -0.025em; line-height: 1.15; margin: 0 0 2.2rem;
     }
-
-    /* Bullets */
-    .bullets {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 1.6rem;
-    }
-    @media (min-width: 720px) {
-      .bullets { grid-template-columns: repeat(3, 1fr); gap: 2.4rem; }
-    }
-    .bullets li {
-      padding-top: 1.15rem;
-      border-top: 1px solid var(--line);
-    }
-    .bullets h3 {
-      font-size: 1.08rem;
-      font-weight: 590;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.45rem;
-    }
-    .bullets p {
-      margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.98rem;
-    }
-
-    /* Steps */
-    .steps {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      counter-reset: step;
-      display: grid;
-      gap: 1.5rem;
-    }
-    @media (min-width: 720px) {
-      .steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-    }
-    .steps li {
-      counter-increment: step;
-    }
+    .bullets { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.6rem; }
+    @media (min-width: 720px) { .bullets { grid-template-columns: repeat(3, 1fr); gap: 2.4rem; } }
+    .bullets li { padding-top: 1.15rem; border-top: 1px solid var(--line); }
+    .bullets h3 { font-size: 1.08rem; font-weight: 590; margin: 0 0 0.45rem; }
+    .bullets p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+    .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 1.5rem; }
+    @media (min-width: 720px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+    .steps li { counter-increment: step; }
     .steps li::before {
-      content: counter(step);
-      display: block;
-      font-family: var(--serif);
-      font-size: 1.55rem;
-      color: var(--ink-soft);
-      margin-bottom: 0.7rem;
+      content: counter(step); display: block; font-family: var(--serif);
+      font-size: 1.55rem; color: var(--ink-soft); margin-bottom: 0.7rem;
     }
-    .steps h3 {
-      font-size: 1.08rem;
-      font-weight: 590;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.4rem;
-    }
-    .steps p {
-      margin: 0;
-      color: var(--ink-soft);
-      font-size: 0.98rem;
-    }
+    .steps h3 { font-size: 1.08rem; font-weight: 590; margin: 0 0 0.4rem; }
+    .steps p { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
 
-    /* Price */
     .price-block {
-      background: var(--ink);
-      color: var(--on-fill);
-      border-radius: 20px;
+      background: var(--ink); color: var(--on-fill); border-radius: 20px;
       padding: clamp(1.75rem, 4vw, 2.75rem);
     }
     .price-block h2 { color: var(--on-fill); margin-bottom: 0.5rem; }
-    .price-note {
-      color: rgba(244, 240, 232, 0.68);
-      margin: 0 0 2rem;
-      max-width: 36rem;
-    }
-    .plans {
-      display: grid;
-      gap: 1.25rem;
-    }
-    @media (min-width: 720px) {
-      .plans { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    }
+    .price-note { color: rgba(244, 240, 232, 0.68); margin: 0 0 2rem; max-width: 38rem; }
+    .plans { display: grid; gap: 1.25rem; }
+    @media (min-width: 720px) { .plans { grid-template-columns: 1.15fr 0.85fr; gap: 1.5rem; } }
     .plan {
-      border: 1px solid rgba(244, 240, 232, 0.16);
-      border-radius: 14px;
-      padding: 1.4rem 1.35rem 1.5rem;
+      border: 1px solid rgba(244, 240, 232, 0.16); border-radius: 14px;
+      padding: 1.4rem 1.35rem 1.5rem; display: flex; flex-direction: column; gap: 0.85rem;
     }
+    .plan.featured { background: rgba(244, 240, 232, 0.06); }
     .plan .label {
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(244, 240, 232, 0.62);
-      margin: 0 0 0.55rem;
+      font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(244, 240, 232, 0.62); margin: 0;
     }
     .plan .amt {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      letter-spacing: -0.03em;
-      line-height: 1;
-      margin: 0 0 0.35rem;
+      font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.6rem);
+      letter-spacing: -0.03em; line-height: 1; margin: 0;
     }
     .plan .amt small {
-      font-family: var(--sans);
-      font-size: 0.95rem;
-      letter-spacing: 0;
-      font-weight: 400;
-      opacity: 0.72;
+      font-family: var(--sans); font-size: 0.95rem; letter-spacing: 0;
+      font-weight: 400; opacity: 0.72;
     }
-    .plan p {
-      margin: 0;
-      color: rgba(244, 240, 232, 0.72);
-      font-size: 0.95rem;
+    .plan p { margin: 0; color: rgba(244, 240, 232, 0.72); font-size: 0.95rem; }
+    .plan ul {
+      margin: 0; padding: 0 0 0 1.1rem; color: rgba(244, 240, 232, 0.78); font-size: 0.92rem;
     }
+    .plan .btn-fill { background: var(--on-fill); color: var(--ink); align-self: flex-start; margin-top: 0.35rem; }
+    .plan .btn-fill:hover { background: #fff; }
+    .plan .btn-ghost {
+      border-color: rgba(244, 240, 232, 0.28); color: var(--on-fill); align-self: flex-start; margin-top: 0.35rem;
+    }
+    .plan .btn-ghost:hover { background: rgba(244, 240, 232, 0.08); }
 
-    /* Form */
-    .contact-grid {
-      display: grid;
-      gap: 2.5rem;
+    .pay-box {
+      background: #fff; border: 1px solid var(--line); border-radius: 16px;
+      padding: clamp(1.5rem, 3vw, 2rem); margin-top: 1.75rem;
     }
+    .pay-box h3 { margin: 0 0 0.65rem; font-size: 1.15rem; letter-spacing: -0.02em; }
+    .pay-box p { margin: 0 0 1rem; color: var(--ink-soft); font-size: 0.98rem; }
+    .pay-options { display: grid; gap: 0.85rem; }
+    @media (min-width: 640px) { .pay-options { grid-template-columns: 1fr 1fr; } }
+    .pay-card {
+      border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem;
+      background: var(--cream);
+    }
+    .pay-card strong { display: block; margin-bottom: 0.35rem; }
+    .pay-card p { margin: 0 0 0.75rem; font-size: 0.9rem; }
+    .pay-card .muted { font-size: 0.8rem; color: var(--ink-soft); margin: 0.5rem 0 0; }
+    .badge {
+      display: inline-block; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--cream-deep); padding: 0.2rem 0.5rem; border-radius: 6px; margin-bottom: 0.5rem;
+    }
+    .badge.live { background: #d8eadf; color: var(--accent); }
+    .badge.wait { background: #f0e6d8; color: #6b4e2e; }
+
+    .contact-grid { display: grid; gap: 2.5rem; }
     @media (min-width: 820px) {
       .contact-grid { grid-template-columns: 0.9fr 1.1fr; gap: 3.5rem; align-items: start; }
     }
     .contact-copy p { color: var(--ink-soft); max-width: 28rem; }
-    .call-big {
-      display: inline-block;
-      font-family: var(--serif);
-      font-size: clamp(1.6rem, 3vw, 2rem);
-      letter-spacing: -0.03em;
-      text-decoration: none;
-      margin: 0.4rem 0 1.2rem;
-    }
-    .call-big:hover { text-decoration: underline; text-underline-offset: 0.12em; }
-
-    form {
-      display: grid;
-      gap: 0.95rem;
-    }
-    label {
-      display: grid;
-      gap: 0.35rem;
-      font-size: 0.82rem;
-      font-weight: 560;
-      letter-spacing: 0.01em;
-    }
-    .pair {
-      display: grid;
-      gap: 0.95rem;
-    }
-    @media (min-width: 560px) {
-      .pair { grid-template-columns: 1fr 1fr; }
-    }
+    form { display: grid; gap: 0.95rem; }
+    label { display: grid; gap: 0.35rem; font-size: 0.82rem; font-weight: 560; }
+    .pair { display: grid; gap: 0.95rem; }
+    @media (min-width: 560px) { .pair { grid-template-columns: 1fr 1fr; } }
     input, textarea {
-      width: 100%;
-      font: inherit;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--ink);
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 0.7rem 0.85rem;
-      appearance: none;
+      width: 100%; font: inherit; font-size: 1rem; color: var(--ink);
+      background: #fff; border: 1px solid var(--line); border-radius: 10px;
+      padding: 0.7rem 0.85rem; appearance: none;
     }
-    textarea { min-height: 7.2rem; resize: vertical; }
-    input::placeholder, textarea::placeholder { color: #8A867C; }
-    .form-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.85rem 1.1rem;
-      margin-top: 0.25rem;
-    }
-    .form-hint {
-      font-size: 0.85rem;
-      color: var(--ink-soft);
-      margin: 0;
-    }
-    .status {
-      margin: 0.35rem 0 0;
-      font-size: 0.92rem;
-      min-height: 1.3em;
-    }
+    textarea { min-height: 6rem; resize: vertical; }
+    .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.85rem 1.1rem; }
+    .form-hint { font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
+    .status { margin: 0.35rem 0 0; font-size: 0.92rem; min-height: 1.3em; }
     .status[data-kind="ok"] { color: #1F5C3A; }
     .status[data-kind="err"] { color: #8A2B1A; }
-
-    /* Footer */
     footer {
-      padding: 2.4rem 0 3rem;
-      border-top: 1px solid var(--line);
-      color: var(--ink-soft);
-      font-size: 0.92rem;
-    }
-    footer .nav {
-      align-items: flex-start;
-      gap: 1.25rem;
+      padding: 2.4rem 0 3rem; border-top: 1px solid var(--line);
+      color: var(--ink-soft); font-size: 0.92rem;
     }
     footer p { margin: 0.2rem 0; }
     footer a { text-decoration: none; }
     footer a:hover { text-decoration: underline; text-underline-offset: 0.16em; }
-
+    .note {
+      font-size: 0.9rem; color: var(--ink-soft); max-width: 40rem; margin: 1.5rem 0 0;
+    }
     @media (max-width: 520px) {
       .wrap { width: min(100% - 1.6rem, var(--max)); }
-      .hero { padding: 3.4rem 0 3rem; }
+      .hero { padding: 3.4rem 0 2.8rem; }
       .brand span { display: none; }
     }
   </style>
@@ -386,39 +199,40 @@
 
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#top">72 Hour Page <span>North Jersey trades</span></a>
-      <a class="phone" href="tel:+19175361245">917-536-1245</a>
+      <a class="brand" href="#top">72 Hour Page <span>Conversion Kit</span></a>
+      <a class="nav-cta" href="#buy">Buy the kit — $67</a>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="top">
       <div class="wrap">
-        <p class="eyebrow">Wayne, NJ · Live in 72 hours</p>
-        <h1>The page that books the job.</h1>
-        <p class="lede">Homeowners in North Jersey hire whoever answers first. You get a landing page and lead capture that put your number in front of them — written for landscapers, HVAC, roofers, contractors, and custom builders.</p>
+        <p class="eyebrow">Wayne, NJ · Digital download · No sales call</p>
+        <h1>The page kit that books the job.</h1>
+        <p class="lede">HTML/CSS starter, AI copy prompts, and a launch checklist for local trades. Buy once, edit in an afternoon, publish yourself. Built for landscapers, HVAC, roofers, contractors, and custom builders — no agency wait, no call required.</p>
         <div class="cta-row">
-          <a class="btn btn-fill" href="tel:+19175361245">Call 917-536-1245</a>
-          <a class="btn btn-ghost" href="#start">Tell us what’s broken</a>
+          <a class="btn btn-fill" href="#buy">Get the kit — $67</a>
+          <a class="btn btn-ghost" href="#whats-inside">What’s inside</a>
         </div>
+        <p class="price-pill" style="display:block;margin-top:1.25rem;">One-time digital product · Self-serve · Instant positioning for DIY</p>
       </div>
     </section>
 
-    <section class="rule" aria-labelledby="outcomes-heading">
+    <section class="rule" id="whats-inside" aria-labelledby="inside-heading">
       <div class="wrap">
-        <h2 id="outcomes-heading">What you walk away with</h2>
+        <h2 id="inside-heading">What’s in the kit</h2>
         <ul class="bullets">
           <li>
-            <h3>Calls instead of bounce.</h3>
-            <p>A page built to get the job — clear offer, one ask, your phone on every screen. People who want work done can reach you in one tap.</p>
+            <h3>page-template.html</h3>
+            <p>Single-file conversion page: phone CTA, lead form, mobile layout. Replace placeholders and host anywhere.</p>
           </li>
           <li>
-            <h3>Leads you don’t miss.</h3>
-            <p>After-hours inquiries don’t vanish. Name, town, and phone land in your inbox so you can call back first thing.</p>
+            <h3>AI copy prompt pack</h3>
+            <p>Ready prompts for headlines, offers, FAQs, and follow-ups — tuned for local service businesses.</p>
           </li>
           <li>
-            <h3>Live before the week is over.</h3>
-            <p>No six-week agency calendar. You talk Monday. The page is up in 72 hours, ready to take work.</p>
+            <h3>Launch checklist</h3>
+            <p>Copy, publish, test the form, go live. So nothing important gets skipped on launch day.</p>
           </li>
         </ul>
       </div>
@@ -426,51 +240,93 @@
 
     <section class="rule" aria-labelledby="how-heading">
       <div class="wrap">
-        <h2 id="how-heading">How it works</h2>
+        <h2 id="how-heading">How it works (no call)</h2>
         <ol class="steps">
           <li>
-            <h3>You call. You talk shop.</h3>
-            <p>Trade, towns you cover, what the current site (or lack of one) is costing you. Ten minutes is enough.</p>
+            <h3>You buy the kit.</h3>
+            <p>Pay online or request an invoice by email. No discovery call. No calendar booking.</p>
           </li>
           <li>
-            <h3>We write and build.</h3>
-            <p>Copy, layout, and a form that captures the lead. No runaround. You see it before it goes live.</p>
+            <h3>You download the files.</h3>
+            <p>After payment confirmation, you get the kit folder (README, template, prompts, checklist).</p>
           </li>
           <li>
-            <h3>You go live in 72 hours.</h3>
-            <p>The page is on the internet. Calls and form leads come to you. You keep booking jobs.</p>
+            <h3>You publish.</h3>
+            <p>Fill placeholders, run a couple of prompts, host the page, start taking leads.</p>
           </li>
         </ol>
       </div>
     </section>
 
-    <section class="rule" aria-labelledby="price-heading">
+    <section class="rule" id="buy" aria-labelledby="price-heading">
       <div class="wrap">
         <div class="price-block">
           <h2 id="price-heading">Simple pricing</h2>
-          <p class="price-note">Pick a one-time build, or a lower setup with hosting and small edits handled for you.</p>
+          <p class="price-note">Self-serve kit is the primary offer. Done-for-you remains optional if you want someone else to build it.</p>
           <div class="plans">
-            <article class="plan">
-              <p class="label">Done once</p>
-              <p class="amt">$997</p>
-              <p>Setup. Landing page plus lead capture. You own the page. No monthly from us.</p>
+            <article class="plan featured">
+              <p class="label">Primary · Digital kit</p>
+              <p class="amt">$67 <small>one-time</small></p>
+              <p>Local Business Conversion Page Kit. You edit and publish. No monthly fee. No call to buy.</p>
+              <ul>
+                <li>HTML/CSS page template</li>
+                <li>AI copy prompts</li>
+                <li>Launch checklist + buyer README</li>
+              </ul>
+              <a class="btn btn-fill" href="#pay">Buy / download — $67</a>
             </article>
             <article class="plan">
-              <p class="label">Hosted</p>
-              <p class="amt">$497 <small>+ $149/mo</small></p>
-              <p>Lower setup. We host it, keep it online, and handle small edits so you don’t have to.</p>
+              <p class="label">Optional · Done-for-you</p>
+              <p class="amt">Custom</p>
+              <p>We write and build the page for you. Email to request a quote — phone optional, not required to start.</p>
+              <ul>
+                <li>Formerly $997 / $497+$149/mo packages</li>
+                <li>Still available on request</li>
+              </ul>
+              <a class="btn btn-ghost" href="mailto:info@zncsolutions.com?subject=DFY%20page%20quote%20request&body=Hi%20Lukasz%2C%0A%0AI%27d%20like%20a%20done-for-you%20page%20quote.%0A%0ABusiness%3A%0ATrade%3A%0ATowns%3A%0A">Email for DFY quote</a>
             </article>
           </div>
+        </div>
+
+        <div class="pay-box" id="pay">
+          <h3>How to pay &amp; get the files</h3>
+          <p>Card checkout links go live once a free Stripe Payment Link or PayPal.me is connected. Until then, use the invoice email — same $67 kit, delivered after payment clears.</p>
+          <div class="pay-options">
+            <div class="pay-card">
+              <span class="badge wait">Ready when linked</span>
+              <strong>Stripe Payment Link</strong>
+              <p>One-click card pay. Replace this with your free Stripe Payment Link URL (no Shopify, no paid SaaS plan).</p>
+              <!-- PAYMENT_BLOCKER: Stripe account + Payment Link not created yet. Free Stripe account is allowed; do not buy Pro plans. -->
+              <a class="btn btn-ghost" href="https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" rel="noopener" id="stripe-link">Pay $67 with card (Stripe)</a>
+              <p class="muted">Placeholder URL until Payment Link is created in Stripe Dashboard → Payment Links.</p>
+            </div>
+            <div class="pay-card">
+              <span class="badge wait">Ready when linked</span>
+              <strong>PayPal.me</strong>
+              <p>Send $67 via PayPal.me, then email the receipt for delivery.</p>
+              <a class="btn btn-ghost" href="https://paypal.me/REPLACE_USERNAME/67" rel="noopener" id="paypal-link">Pay $67 via PayPal.me</a>
+              <p class="muted">Placeholder until PayPal.me username is set. Free PayPal personal link — no paid apps.</p>
+            </div>
+            <div class="pay-card" style="grid-column: 1 / -1;">
+              <span class="badge live">Works now</span>
+              <strong>Pay via invoice (email)</strong>
+              <p>Opens your email with a kit order. We’ll reply with payment instructions and the download after payment.</p>
+              <a class="btn btn-fill" href="mailto:info@zncsolutions.com?subject=Conversion%20Page%20Kit%20%E2%80%94%20%2467%20order&body=Hi%20Lukasz%2C%0A%0AI%20want%20the%20Local%20Business%20Conversion%20Page%20Kit%20(%2467%20one-time).%0A%0AName%3A%0ABusiness%20(optional)%3A%0APreferred%20pay%20method%3A%20invoice%20%2F%20PayPal%20%2F%20card%0A%0AThanks.">Email to buy — $67 kit</a>
+              <p class="muted">info@zncsolutions.com · Delivery after payment confirmation · Files also mirrored under /kit/ on this site for fulfillment.</p>
+            </div>
+          </div>
+          <p class="note">Preview the buyer README anytime: <a href="kit/">/kit/</a> (full commercial download delivered after payment).</p>
         </div>
       </div>
     </section>
 
-    <section class="rule" id="start" aria-labelledby="start-heading">
+    <section class="rule" id="contact" aria-labelledby="contact-heading">
       <div class="wrap contact-grid">
         <div class="contact-copy">
-          <h2 id="start-heading">Start with a call</h2>
-          <a class="call-big" href="tel:+19175361245">917-536-1245</a>
-          <p>If now isn’t a good time, send the form. It opens your email with the details filled in — no account, no wait. Lukasz Zienko, Wayne, NJ.</p>
+          <h2 id="contact-heading">Questions?</h2>
+          <p>Email is the default. No call needed to buy the kit. Phone is listed for DFY or if you already prefer voice — Wayne, NJ.</p>
+          <p style="margin-top:1rem;"><a href="mailto:info@zncsolutions.com"><strong>info@zncsolutions.com</strong></a><br>
+          <a href="tel:+19175361245">917-536-1245</a> (optional)</p>
         </div>
 
         <form id="lead-form" action="mailto:info@zncsolutions.com" method="post" enctype="text/plain" novalidate>
@@ -478,24 +334,16 @@
             <label>Name
               <input type="text" name="name" id="name" autocomplete="name" required placeholder="Your name">
             </label>
-            <label>Business
-              <input type="text" name="business" id="business" autocomplete="organization" required placeholder="Company name">
+            <label>Email
+              <input type="email" name="email" id="email" autocomplete="email" required placeholder="you@business.com">
             </label>
           </div>
-          <div class="pair">
-            <label>Town
-              <input type="text" name="town" id="town" autocomplete="address-level2" required placeholder="Wayne, Paramus…">
-            </label>
-            <label>Phone
-              <input type="tel" name="phone" id="phone" autocomplete="tel" required placeholder="917-555-0100">
-            </label>
-          </div>
-          <label>What’s broken
-            <textarea name="broken" id="broken" required placeholder="No site, no calls, old page that doesn’t convert…"></textarea>
+          <label>Message
+            <textarea name="message" id="message" required placeholder="Kit question, DFY quote, or payment confirmation…"></textarea>
           </label>
           <div class="form-actions">
-            <button class="btn btn-fill" type="submit">Send to email</button>
-            <p class="form-hint">Opens mail to info@zncsolutions.com</p>
+            <button class="btn btn-fill" type="submit">Send email</button>
+            <p class="form-hint">Opens mail to info@zncsolutions.com · No DOB/SSN collected</p>
           </div>
           <p class="status" id="form-status" role="status" aria-live="polite"></p>
         </form>
@@ -506,12 +354,12 @@
   <footer>
     <div class="wrap nav">
       <div>
-        <p>72 Hour Page</p>
-        <p>Lukasz Zienko · Wayne, NJ</p>
+        <p>72 Hour Page · Conversion Kit</p>
+        <p>Lukasz Zienko · Wayne, NJ · ZNC Solutions</p>
       </div>
       <div>
-        <p><a href="tel:+19175361245">917-536-1245</a></p>
         <p><a href="mailto:info@zncsolutions.com">info@zncsolutions.com</a></p>
+        <p><a href="tel:+19175361245">917-536-1245</a></p>
       </div>
     </div>
   </footer>
@@ -521,41 +369,23 @@
       var form = document.getElementById("lead-form");
       var status = document.getElementById("form-status");
       if (!form) return;
-
-      function val(id) {
-        return (document.getElementById(id).value || "").trim();
-      }
-
+      function val(id) { return (document.getElementById(id).value || "").trim(); }
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         status.textContent = "";
         status.removeAttribute("data-kind");
-
-        var name = val("name");
-        var business = val("business");
-        var town = val("town");
-        var phone = val("phone");
-        var broken = val("broken");
-
-        if (!name || !business || !town || !phone || !broken) {
+        var name = val("name"), email = val("email"), message = val("message");
+        if (!name || !email || !message) {
           status.dataset.kind = "err";
-          status.textContent = "Please fill in every field so the note is useful.";
+          status.textContent = "Please fill in name, email, and message.";
           return;
         }
-
-        var subject = "72 Hour Page — " + business + " (" + town + ")";
-        var body =
-          "Name: " + name + "\n" +
-          "Business: " + business + "\n" +
-          "Town: " + town + "\n" +
-          "Phone: " + phone + "\n\n" +
-          "What's broken:\n" + broken;
-
+        var subject = "72 Hour Page / Kit — " + name;
+        var body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
         var href =
           "mailto:info@zncsolutions.com" +
           "?subject=" + encodeURIComponent(subject) +
           "&body=" + encodeURIComponent(body);
-
         status.dataset.kind = "ok";
         status.textContent = "Opening your email app…";
         window.location.href = href;
