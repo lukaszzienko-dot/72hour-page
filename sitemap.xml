@@ -12,12 +12,47 @@
   </url>
   <url>
     <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/conversion-page-checklist.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/landscaper-conversion-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/hvac-conversion-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/roofer-conversion-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/wayne-nj-landscaper-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/north-jersey-hvac-landing-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/paramus-roofer-conversion-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/contractor-landing-page-north-jersey.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 </urlset>
