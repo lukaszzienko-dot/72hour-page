@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lukaszzienko-dot.github.io/72hour-page/sitemap.xml
