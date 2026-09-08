@@ -155,4 +155,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/irrigation-sprinkler-conversion-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 </urlset>
