@@ -56,7 +56,7 @@ If you want someone else to write, build, and launch the page for you, reply to 
 
 ## Support
 
-Questions about the kit files: **info@zncsolutions.com**  
+Questions about the kit files: **info@zncsolutions.com** · www.zncsolutions.com  
 Wayne, NJ · phone for DFY only: **917-536-1245**
 
 ZNC Solutions · Lukasz Zienko
