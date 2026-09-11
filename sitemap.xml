@@ -175,4 +175,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/paterson-nj-electrician-landing-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://lukaszzienko-dot.github.io/72hour-page/tips/passaic-nj-plumber-landing-page.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
 </urlset>
